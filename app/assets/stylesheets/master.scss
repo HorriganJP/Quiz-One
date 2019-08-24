@@ -18,3 +18,36 @@
   background-color: #f2f2f2;
   margin-bottom: 15px;
 }
+
+.card-title {
+  padding-left: 10px;
+}
+
+.card-text {
+  padding-left: 10px;
+}
+
+.nav-item {
+  margin: 5px 10px 25px 10px;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,19 +1,20 @@
-<div class="header col-12 text-center">
-  <h1 class="header-text"> Horrigan Quiz One </h1>
-</div>
-
-<ul class="nav justify-content-center">
-  <li class="nav-item">
-    <%= link_to "New Task", new_item_path, class: 'btn btn-primary' %>
-  </li>
-</ul>
-<br/>
 
 
-  <% @items.each do |item| %>
-    <div class="card col-md-6 offset-3 text-center">
-      <h4 class="card-title"><%= item.task %></h4>
-      <p class="card-text"><%= item.description %></p>
+ 
+    <div class="row">
+      <% @items.each do |item| %>
+        <div class="column">
+          <div class="card col-10 offset-1">
+            <h4 class="card-title"><%= item.task %></h4>
+            <p class="card-text"><%= item.description %></p>
+            <div class="nav-item col-10 offset-1">
+              <%= link_to "Update Task", item_path(item), class: 'btn btn-primary' %>
+              <%= link_to "Remove Task", item_path(item), class: 'btn btn-primary', method: :delete, data: {confirm: "Click to confirm to remove this task?"} %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+
+  
 
