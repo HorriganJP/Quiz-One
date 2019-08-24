@@ -1,0 +1,20 @@
+<div class="header col-12 text-center">
+  <h1 class="header-text">Create a Task</h1>
+</div>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <%= link_to "Home", root_path %>
+  </li>
+</ul>
+
+<div class="col-10 offset-1"> 
+  <div class="body">
+    <%= simple_form_for @item do |f| %>
+      <%= f.input :task %>
+      <%= f.input :description %>
+      <br/>
+      <%= f.submit 'Create Task', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
